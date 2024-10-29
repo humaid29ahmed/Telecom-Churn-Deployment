@@ -1,0 +1,33 @@
+body {
+    background-color:#BFECFF;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-style: normal;
+  }
+  .section-style{
+    background-color: #FFF6E3;
+    border-radius: 25px;
+  }
+  .result-style
+  {
+    background-color: #B9E5E8;
+    color:blueviolet;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    padding: 5rem;
+    margin-top: 10px;
+  }
+.centering-form{
+    display: flex;
+    height: 800px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Churn Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    
+</head>
+<body>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-dark">
+        <a href="/" class="d-flex text-light align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-reception-4" viewBox="0 0 16 16">
+                <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+          <span class="fs-4 text-light">Churn</span>
+        </a>
+    
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="table.html" class="nav-link active" aria-current="page">Data Logs</a></li>
+        </ul>
+    </header>
+    <section class="container">
+        <div class="row section-style">
+    <div class="col-md-6 centering-form">
+    <h1 class="poppins-regular">This is churn prediction</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+         Age <input type="number" name="Age" required> <br> <br>
+         Tenure in months <input type="number" name="Tenure_in_Months" required> <br> <br>
+        Offer Type <select name="Offer" id="" required>
+            <option value=0>Offer A</option>
+            <option value=1>Offer B</option>
+            <option value=2>Offer C</option>
+            <option value=3>Offer D</option>
+            <option value=4>Offer E</option>
+        </select><br> <br>
+        Internet Type <select name="Internet_Type" id="" required>
+            <option value=0>Fiber Optic</option>
+            <option value=1>DSL</option>
+            <option value=2>Cable</option>
+        </select><br> <br>
+        Avg Monthly GB Download <input type="number" name="Avg_Monthly_GB_Download" required> <br> <br>
+        Unlimited Data <select name="Unlimited_Data" id="" required>
+            <option value=0>Yes</option>
+            <option value=1>No</option>
+        </select> <br> <br>
+        Contract <select name="Contract" id="" required>
+            <option value=0>Month-to-Month</option>
+            <option value=1>Two Year</option>
+            <option value=2>One Year</option>
+        </select><br><br>
+        Payment Method <select name="Payment_Method" id="" required>
+            <option value=0>Bank Withdrawal</option>
+            <option value=1>Credit Card</option>
+            <option value=2>Mailed Check</option>
+         </select><br><br>
+        Monthly Charges <input type="number" name="Monthly_Charge" required> <br> <br>
+        Total Exta Charges <input type="number" name="Total_Extra_Data_Charges" required> <br> <br>
+        <input type="submit">
+      </form>
+      {% if result %}
+      <div>
+       <h1  class="poppins-regular result-style">The Customer is going to {{result}}</h1>
+       </div>
+
+      {% endif %}
+      </div>
+      <div class="col-md-6">
+        {% load static %}
+        <img src="{% static 'images/phone.svg'%}" width="400" height="500" alt="phone-img">
+      </div>
+      </div>
+    </section>
+    <footer class="d-flex flex-wrap justify-content-between mx-0 align-items-center py-3 mt-4 mb-0  border-top bg-dark">
+        <p class="col-md-4 mb-0 text-light">© 2024 Company, Inc</p>
+      
+          <a href="/" class="col-md-4 text-light d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-reception-4" viewBox="0 0 16 16">
+                <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+          </a>
+    </footer>
+</body>
+
+  
+</html>

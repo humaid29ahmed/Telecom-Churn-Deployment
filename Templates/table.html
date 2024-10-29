@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Info</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+        <th style="border: 1px solid black;">Age</th>
+        <th style="border: 1px solid black;">Tenure_in_Months</th>
+        <th style="border: 1px solid black;">Offer</th>
+        <th style="border: 1px solid black;">Internet_Type</th>
+        <th style="border: 1px solid black;">Avg_Monthly_GB_Download</th>
+        <th style="border: 1px solid black;">Unlimited_Data</th>
+        <th style="border: 1px solid black;">Contract</th>
+        <th style="border: 1px solid black;">Payment_Method</th>
+        <th style="border: 1px solid black;">Monthly_Charge</th>
+        <th style="border: 1px solid black;">Total_Extra_Data_Charges</th>
+        <th style="border: 1px solid black;">Result</th>
+        </tr>
+        {% for n in customerData %}
+        <tr>
+            <td>{{n.Age}}</td>
+            <td>{{n.Tenure_in_Months}}</td>
+            <td>{{n.Offer}}</td>
+            <td>{{n.Internet_Type}}</td>
+            <td>{{n.Avg_Monthly_GB_Download}}</td>
+            <td>{{n.Unlimited_Data}}</td>
+            <td>{{n.Contract}}</td>
+            <td>{{n.Payment_Method}}</td>
+            <td>{{n.Monthly_Charge}}</td>
+            <td>{{n.Total_Extra_Data_Charges}}</td>
+            <td>{{n.prediction}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
