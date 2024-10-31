@@ -12,5 +12,5 @@ class customerInfo(models.Model):
     Payment_Method = models.IntegerField();
     Monthly_Charge = models.IntegerField();
     Total_Extra_Data_Charges = models.IntegerField();
-    prediction = models.CharField(max_length=10, default="Some String2");
+    prediction = models.CharField(max_length=20, default="abc");
 
