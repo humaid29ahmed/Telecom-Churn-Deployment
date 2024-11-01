@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "TelecomChurnPrediction/wsgi.py",
+        "src": "api/index.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "TelecomChurnPrediction/wsgi.py"
+        "dest": "api/index.py"
       }
     ]
   }
