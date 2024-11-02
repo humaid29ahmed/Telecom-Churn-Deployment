@@ -51,7 +51,7 @@ imbalanced-learn==0.11.0
 imblearn==0.0
 incremental==22.10.0
 ipykernel==6.29.0
-ipython==8.20.0
+ipython==8.16.1
 ipywidgets==8.1.1
 isoduration==20.11.0
 itemadapter==0.9.0
