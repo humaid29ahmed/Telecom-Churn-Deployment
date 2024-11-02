@@ -1,5 +1,5 @@
 # build_files.sh
-py -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
 
 # make migrations
 python3.9 manage.py migrate 
