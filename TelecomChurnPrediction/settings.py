@@ -11,17 +11,18 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv()
-
+import os
+# settings.py
+from dotenv import load_dotenv
 load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# For vercel deployment
+# For Vercel Deployment
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -89,16 +90,7 @@ WSGI_APPLICATION = 'TelecomChurnPrediction.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-# 'default': {
-# 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-# 'NAME': 'telecom',
-# 'USER' : 'postgres',
-# 'PASSWORD' : 'Humaid@29',
-# 'HOST' : 'localhost',
-# 'PORT' : '5432',
-# }
-# }
+#
 
 DATABASES = {
     'default': {
