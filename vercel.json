@@ -5,7 +5,7 @@
         "src": "TelecomChurnPrediction/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb","env": {
-          "PG_CONFIG": "./pg_config"
+          "PG_CONFIG": "./pg_config.exe"
         }, "runtime": "python3.9" }
       },
       {
