@@ -5,4 +5,4 @@
 ## 3) Run the Command
 > python manage.py runserver
 
-### [live link: ](https://telecom-churn-deployment.onrender.com)
+### live link:(https://telecom-churn-deployment.onrender.com)
